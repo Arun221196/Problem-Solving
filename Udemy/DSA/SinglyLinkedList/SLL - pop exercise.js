@@ -76,7 +76,7 @@ class SinglyLinkedList{
         this.tail = prevTail;
         this.tail.next = null;
         this.length--;
-        if(this.length===0){
+        if(this.length===0){ // if there was only one node should update head and tail to null
             this.head=null;
             this.tail=null;
         }
