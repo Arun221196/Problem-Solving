@@ -22,25 +22,25 @@ singlyLinkedList.head.next.val; // 10
 singlyLinkedList.tail.val; // 10
  */
 
-class Node{
-    constructor(val){
+class Node {
+    constructor(val) {
         this.val = val
-        this.next = null;      
+        this.next = null;
     }
 }
 
-class SinglyLinkedList{
-    
-    constructor(val){
+class SinglyLinkedList {
+
+    constructor(val) {
         this.head = null;
         this.tail = null;
         this.length = 0;
     }
-    
-    push(val){
+
+    push(val) {
         // YOUR CODE GOES HERE
         let newNode = new Node(val);
-        if(!this.head){
+        if (!this.head) {
             this.head = newNode;
             this.tail = newNode;
         }

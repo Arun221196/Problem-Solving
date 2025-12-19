@@ -40,20 +40,20 @@ singlyLinkedList.length; // 0
  */
 
 
-class Node{
-    constructor(val){
+class Node {
+    constructor(val) {
         this.val = val
-        this.next = null;      
+        this.next = null;
     }
 }
 
-class SinglyLinkedList{
-    constructor(val){
+class SinglyLinkedList {
+    constructor(val) {
         this.head = null;
         this.tail = null;
-        this.length = 0;    
+        this.length = 0;
     }
-    push(val){
+    push(val) {
         var newNode = new Node(val);
         if (!this.head) {
             this.head = newNode;
@@ -62,23 +62,23 @@ class SinglyLinkedList{
             this.tail.next = newNode;
             this.tail = newNode;
         }
-            this.length++;
-        
+        this.length++;
+
         return this;
     }
-    pop(){
-        if(!this.head) return;
-        let current=this.head, prevTail=this.head;
-        while(current.next){
+    pop() {
+        if (!this.head) return;
+        let current = this.head, prevTail = this.head;
+        while (current.next) {
             prevTail = current;
             current = current.next;
         }
         this.tail = prevTail;
         this.tail.next = null;
         this.length--;
-        if(this.length===0){ // if there was only one node should update head and tail to null
-            this.head=null;
-            this.tail=null;
+        if (this.length === 0) { // if there was only one node should update head and tail to null
+            this.head = null;
+            this.tail = null;
         }
         return current;
     }
