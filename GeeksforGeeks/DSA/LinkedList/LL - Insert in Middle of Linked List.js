@@ -8,25 +8,25 @@ Given the head of a Singly Linked List and a value x. The task is to insert the 
 class Solution {
     insertInMiddle(head, x) {
         // code here
-        if(head === null){
+        if (head === null) {
             return new Node(x);
         }
-        else{
-            
-        let slow = head;
-        let fast = head.next; // start by one advance to handle even length case
-        
-        // find middle using slow and fast pointers
-        while(fast !== null && fast.next !== null){
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        
-        // insert node
-        let newNode = new Node(x);
-        newNode.next = slow.next;
-        slow.next = newNode;
-        
+        else {
+
+            let slow = head;
+            let fast = head.next; // start by one advance to handle even length case
+
+            // find middle using slow and fast pointers
+            while (fast !== null && fast.next !== null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            // insert node
+            let newNode = new Node(x);
+            newNode.next = slow.next;
+            slow.next = newNode;
+
         }
         return head;
     }
