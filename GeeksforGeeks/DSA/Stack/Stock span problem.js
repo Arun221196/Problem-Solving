@@ -24,4 +24,31 @@ class Solution {
 
         return span;
     }
+
+    calculateSpanOptimized(arr) {
+        // Optimized approach using stack
+        let n = arr.length;
+        let span = new Array(n);
+        let stack = []; // Stack to store indices
+
+        // Initialize the first element
+        span[0] = 1;
+        stack.push(0);
+
+        // Process remaining elements
+        for (let i = 1; i < n; i++) {
+            // Pop elements from stack while stack is not empty and current element is greater than or equal to the element at the top of the stack
+            while (stack.length > 0 && arr[i] >= arr[stack[stack.length - 1]]) {
+                stack.pop();
+            }
+
+            // If stack is empty, it means all previous elements are smaller than current element
+            span[i] = stack.length === 0 ? i + 1 : i - stack[stack.length - 1];
+
+            // Push current index to the stack
+            stack.push(i);
+        }
+
+        return span;
+    }
 }
