@@ -1,4 +1,5 @@
 /**
+ * https://www.geeksforgeeks.org/problems/trapping-rain-water-1587115621/0
  * @param {number[]} arr
  * @returns {number}
  */
