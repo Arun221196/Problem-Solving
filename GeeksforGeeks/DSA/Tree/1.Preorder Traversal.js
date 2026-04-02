@@ -1,5 +1,6 @@
 /**
  * https://www.geeksforgeeks.org/problems/preorder-traversal/1?page=1&category=Tree&sortBy=submissions
+ * Preorder Traversal of a Binary Tree is a depth-first traversal method where the nodes are visited in the following order: Root Node, Left Subtree, Right Subtree. This means that for any given node, you first visit the node itself, then all the nodes in its left subtree, and finally all the nodes in its right subtree.
  */
 
 /**
